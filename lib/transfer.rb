@@ -28,9 +28,9 @@ class Transfer
 
   # If status is "complete" and accounts are valid, reverse last transfer.
   def reverse_transfer
-    if valid? && @status == "complete" && @sender.balance > @amount
-      @sender.deposit(@amount)
+    if valid? && @status == "complete" && @receiver.balance > @amount
       @receiver.balance -= @amount
+      @sender.deposit(@amount)
       @status = "reversed"
     else 
       @status = "rejected"
