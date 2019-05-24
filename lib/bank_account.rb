@@ -18,9 +18,9 @@ attr_accessor :status, :balance
 
   def valid?
     if @status = "open" && @balance > 0
-      valid
+      "valid"
     else
-      invalid
+      "invalid"
     end
   end
 
