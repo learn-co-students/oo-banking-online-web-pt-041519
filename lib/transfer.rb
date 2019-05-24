@@ -33,8 +33,8 @@ class Transfer
 
       receiver.balance -= @amount
       sender.balance += @amount
-      self.status = "complete"
-    end 
+      self.status = "reversed"
+    end
 
   end
 
