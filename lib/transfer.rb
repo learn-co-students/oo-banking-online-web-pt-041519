@@ -22,7 +22,6 @@ class Transfer
       1.times do receiver.balance += @amount
       self.status = "complete" || self.status = "rejected"
       "Transaction rejected. Please check your account balance."
-    end 
   end
 
 
