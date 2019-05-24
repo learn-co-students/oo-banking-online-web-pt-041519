@@ -12,7 +12,7 @@ attr_accessor :balance
   end
 
   def display_balance
-    "Your balance is $#{Self.balance}."
+    "Your balance is $#{@balance}."
   end
 
   def valid?
