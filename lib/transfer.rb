@@ -20,8 +20,7 @@ class Transfer
     if sender.valid? && receiver.valid? && sender.balance > @amount
       1.times do sender.balance -= @amount
       1.times do receiver.balance += @amount
-      self.status = "complete" else
-      self.status = "rejected"
+      self.status = "complete" || self.status = "rejected"
       "Transaction rejected. Please check your account balance."
 
     end
