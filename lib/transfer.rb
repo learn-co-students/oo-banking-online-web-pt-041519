@@ -18,8 +18,8 @@ class Transfer
 
   def execute_transaction
     if sender.valid? && receiver.valid? && sender.balance > @amount
-      1.times do sender.balance -= @amount
-      1.times do receiver.balance += @amount
+      sender.balance -= @amount
+      receiver.balance += @amount
       self.status = "complete"
     else
         self.status = "rejected"
